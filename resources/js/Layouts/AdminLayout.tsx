@@ -13,6 +13,8 @@ import {
     Sparkles,
     CheckCircle2,
     AlertCircle,
+    Activity,
+    ShieldCheck,
 } from 'lucide-react';
 import { PageProps } from '../types';
 
@@ -26,6 +28,10 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const currentUrl = window.location.pathname;
+    const active = (href: string) => {
+        if (href.includes('?')) return currentUrl === href.split('?')[0] && window.location.search.includes('category=security');
+        return currentUrl === href && !(href === '/admin/izleme' && window.location.search.includes('category=security'));
+    };
 
     const navItems = [
         { label: 'Genel Bakış', href: '/admin', icon: LayoutDashboard },
@@ -33,6 +39,10 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         { label: 'Hizmetler', href: '/admin/hizmetler', icon: Briefcase },
         { label: 'Mesajlar', href: '/admin/mesajlar', icon: MessageSquare },
         { label: 'Site Ayarları & SEO', href: '/admin/ayarlar', icon: Settings },
+        ...(auth.user?.can_monitor ? [
+            { label: 'Canlı Log Merkezi', href: '/admin/izleme', icon: Activity },
+            { label: 'Güvenlik İzleme', href: '/admin/izleme?category=security', icon: ShieldCheck },
+        ] : []),
     ];
 
     const handleLogout = () => {
@@ -60,7 +70,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
                 <nav className="flex-1 p-4 space-y-1">
                     {navItems.map((item) => {
                         const Icon = item.icon;
-                        const isActive = currentUrl === item.href;
+                        const isActive = active(item.href);
                         return (
                             <Link
                                 key={item.href}
@@ -114,7 +124,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
                         <nav className="flex-1 space-y-1">
                             {navItems.map((item) => {
                                 const Icon = item.icon;
-                                const isActive = currentUrl === item.href;
+                                const isActive = active(item.href);
                                 return (
                                     <Link
                                         key={item.href}

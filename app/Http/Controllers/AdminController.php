@@ -65,7 +65,7 @@ class AdminController extends Controller
             ? $request->technologies 
             : array_filter(array_map('trim', explode(',', (string)$request->technologies)));
 
-        Project::create([
+        $project = Project::create([
             'title' => $validated['title'],
             'slug' => Str::slug($validated['title']) . '-' . Str::random(4),
             'category' => $validated['category'],
@@ -77,6 +77,8 @@ class AdminController extends Controller
             'is_featured' => $request->boolean('is_featured', true),
             'order' => (int)($validated['order'] ?? 0),
         ]);
+
+        $request->attributes->set('monitoring_resource_id', $project->id);
 
         return back()->with('success', 'Yeni proje başarıyla eklendi.');
     }
@@ -151,7 +153,7 @@ class AdminController extends Controller
             ? $request->features 
             : array_filter(array_map('trim', explode(',', (string)$request->features)));
 
-        Service::create([
+        $service = Service::create([
             'title' => $validated['title'],
             'slug' => Str::slug($validated['title']),
             'icon' => $validated['icon'] ?? 'Layout',
@@ -161,6 +163,8 @@ class AdminController extends Controller
             'order' => (int)($validated['order'] ?? 0),
             'is_active' => $request->boolean('is_active', true),
         ]);
+
+        $request->attributes->set('monitoring_resource_id', $service->id);
 
         return back()->with('success', 'Hizmet başarıyla eklendi.');
     }

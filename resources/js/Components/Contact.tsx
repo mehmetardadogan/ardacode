@@ -14,6 +14,7 @@ import {
 import { InstagramIcon, WhatsAppIcon } from './Icons';
 import { Service } from '../types';
 import LegalModal from './LegalModal';
+import { trackEvent, csrfHeaders } from '../lib/telemetry';
 
 interface ContactProps {
     phone?: string;
@@ -88,6 +89,8 @@ export default function Contact({
         }
 
         setIsSubmitting(true);
+        const attempt_identifier = crypto.randomUUID();
+        trackEvent('form_started', { attempt_identifier });
 
         try {
             const endpoint = formspreeEndpoint || 'https://formspree.io/f/xaeeqjdq';
@@ -110,17 +113,18 @@ export default function Contact({
             });
 
             const data = await response.json().catch(() => ({}));
+            trackEvent('form_response', { http_status: response.status, attempt_identifier });
 
             if (response.ok) {
+                trackEvent('form_accepted', { http_status: response.status, attempt_identifier });
                 // Also asynchronously backup into local database for admin archive
                 try {
-                    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
-                    await fetch('/iletisim', {
+                    const archiveResponse = await fetch('/iletisim', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
                             'Accept': 'application/json',
-                            'X-CSRF-TOKEN': csrfToken || '',
+                            ...csrfHeaders(),
                         },
                         body: JSON.stringify({
                             name: formData.name,
@@ -130,13 +134,15 @@ export default function Contact({
                             details: formData.message,
                         }),
                     });
+                    if (!archiveResponse.ok) trackEvent('api_failed', { http_status: archiveResponse.status, attempt_identifier });
                 } catch {
+                    trackEvent('api_failed', { attempt_identifier });
                     // Local backup failure won't block Formspree success
                 }
 
                 setStatusMessage({
                     type: 'success',
-                    text: 'Mesajınız başarıyla iletildi! Mehmet Arda Studio ile iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede size dönüş yapacağız.',
+                    text: 'Formspree mesajınızı kabul etti. Mehmet Arda Studio ile iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede size dönüş yapacağız.',
                 });
 
                 // Reset form
@@ -150,6 +156,7 @@ export default function Contact({
                 });
                 setFormErrors({});
             } else {
+                trackEvent('form_failed', { http_status: response.status, attempt_identifier });
                 let errorMessage = 'Mesajınız iletilirken bir sorun oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyin veya doğrudan WhatsApp üzerinden bize ulaşın.';
                 if (data && data.errors && Array.isArray(data.errors) && data.errors.length > 0) {
                     errorMessage = data.errors.map((err: any) => err.message).join(', ');
@@ -160,6 +167,7 @@ export default function Contact({
                 });
             }
         } catch (err: any) {
+            trackEvent('form_failed', { attempt_identifier });
             setStatusMessage({
                 type: 'error',
                 text: 'Ağ bağlantısı kurulamadı. Lütfen internet bağlantınızı kontrol edin veya WhatsApp üzerinden iletişime geçin.',

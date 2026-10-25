@@ -41,11 +41,13 @@ export interface SiteSettings {
 }
 
 export interface PageProps {
+    [key: string]: unknown;
     auth: {
         user: {
             id: number;
             name: string;
             email: string;
+            can_monitor?: boolean;
         } | null;
     };
     flash: {

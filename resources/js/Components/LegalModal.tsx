@@ -84,7 +84,7 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
                             </p>
                             <p>
                                 <strong className="text-[#080F20]">3. Verilerin Aktarımı</strong><br />
-                                Kişisel verileriniz, yasal zorunluluklar haricinde hiçbir üçüncü taraf kişi, kurum veya reklam ağıyla ticari amaçla paylaşılmaz ve aktarılmaz.
+                                İletişim talepleri Formspree aracılığıyla iletilir ve yönetim panelinde arşivlenir. Site Vercel ve Neon altyapısını kullanır; hizmet sağlayıcılar verileri yurt dışında işleyebilir. İsteğe bağlı ziyaret analitiği yalnızca ayrı tercihinizle etkinleşir. Veriler reklam amacıyla satılmaz.
                             </p>
                             <p>
                                 <strong className="text-[#080F20]">4. Haklarınız</strong><br />
@@ -95,11 +95,11 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
                         <>
                             <p>
                                 <strong className="text-[#080F20]">1. Gizlilik Taahhüdü</strong><br />
-                                Mehmet Arda Studio, ziyaretçilerimizin ve müşterilerimizin mahremiyetine en üst düzeyde saygı duyar. Web sitemizi ziyaretiniz sırasında toplanan teknik veriler (IP adresi, tarayıcı türü, ziyaret süresi) yalnızca site performansını iyileştirmek için anonim olarak değerlendirilir.
+                                İzin verdiğinizde sayfa ve bölüm ziyaretleri, iletişim tıklamaları, form gönderiminin teknik sonucu ve uygulama hataları rastgele bir oturum kimliğiyle kaydedilir. Bu izleme kayıtlarına IP adresi, konum, form içeriği, e-posta veya parola eklenmez. Aktif oturum sayısı son beş dakikadaki etkinliğe dayalı bir tahmindir.
                             </p>
                             <p>
                                 <strong className="text-[#080F20]">2. Çerezler (Cookies)</strong><br />
-                                Web sitemizde kullanıcı deneyimini artırmak ve oturum güvenliğini sağlamak için temel düzeyde teknik çerezler kullanılmaktadır. Tarayıcı ayarlarınızdan dilediğiniz an çerezleri devre dışı bırakabilirsiniz.
+                                Oturum ve CSRF çerezleri güvenli çalışma için gereklidir. Ziyaret ölçümü tercihiniz tarayıcının yerel depolamasında 180 gün, rastgele ziyaret kimliği sekme oturumunda tutulur. “Gizlilik tercihleri” düğmesinden izin vermeyebilir veya izninizi geri alarak bu sekmenin kayıtlarının silinmesini isteyebilirsiniz. İsteğe bağlı izleme kayıtları en fazla 30 gün saklanır ve 50.000 olaylık saklama sınırı uygulanır.
                             </p>
                             <p>
                                 <strong className="text-[#080F20]">3. Bilgi Güvenliği</strong><br />

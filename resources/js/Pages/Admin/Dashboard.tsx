@@ -30,6 +30,10 @@ export default function Dashboard({ stats, latestMessages = [], recentProjects =
             <Head title="Admin Dashboard — Mehmet Arda Studio" />
 
             <div className="space-y-8">
+                <Link href="/admin/izleme" className="flex flex-wrap items-center justify-between gap-3 rounded-xl bg-[#101e34] px-6 py-5 text-white focus-visible:outline-2 focus-visible:outline-blue-600">
+                    <div><strong className="block text-sm">Sistem İzleme → Canlı Log Merkezi</strong><span className="mt-1 block text-xs text-blue-200">Gerçek ziyaretler, uygulama hataları ve yönetici işlemleri. 8 saniyede bir yenilenir.</span></div>
+                    <span className="text-sm font-semibold">Log merkezini aç →</span>
+                </Link>
                 {/* Stats Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-2xs space-y-3">

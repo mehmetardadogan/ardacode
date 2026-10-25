@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { trackEvent } from '../lib/telemetry';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Layout,
@@ -153,7 +154,7 @@ export default function Services({ services }: ServicesProps) {
                                     {/* Footer Link */}
                                     <div className="pt-5 mt-4 border-t border-[#DCE3EE] flex items-center justify-between">
                                         <button
-                                            onClick={() => setSelectedService(service)}
+                                            onClick={() => { setSelectedService(service); trackEvent('service_viewed', { section: 'hizmetler' }); }}
                                             className="inline-flex items-center gap-2 text-xs font-extrabold text-[#080F20] group-hover:text-[#155DFC] transition-colors cursor-pointer"
                                         >
                                             <span>Detayları İncele</span>

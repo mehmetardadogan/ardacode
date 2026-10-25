@@ -4,9 +4,14 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicImageController;
+use App\Http\Controllers\MonitoringController;
+use App\Http\Controllers\TelemetryController;
 use Illuminate\Support\Facades\Route;
 
 // Public Routes
+Route::get('/internal/monitoring/prune', [MonitoringController::class, 'prune'])->middleware('throttle:5,1')->name('monitoring.prune');
+Route::post('/izleme/olay', [TelemetryController::class, 'store'])->middleware('throttle:telemetry')->name('telemetry.store');
+Route::post('/izleme/iptal', [TelemetryController::class, 'revoke'])->middleware('throttle:telemetry')->name('telemetry.revoke');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/media/{id}', [PublicImageController::class, 'show'])->whereUuid('id')->name('media.show');
 Route::get('/projeler/{slug}', [HomeController::class, 'projectDetail'])->name('project.detail');
@@ -29,6 +34,13 @@ Route::post('/admin/logout', [AuthController::class, 'logout'])
 
 // Admin Protected Area
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    Route::middleware(['can:view-monitoring', 'throttle:monitoring'])->group(function () {
+        Route::get('/izleme', [MonitoringController::class, 'index'])->name('monitoring');
+        Route::get('/izleme/events', [MonitoringController::class, 'events'])->name('monitoring.events');
+        Route::get('/izleme/export', [MonitoringController::class, 'export'])->name('monitoring.export');
+        Route::get('/izleme/events/{event}', [MonitoringController::class, 'show'])->whereNumber('event')->name('monitoring.show');
+        Route::patch('/izleme/events/{event}', [MonitoringController::class, 'update'])->whereNumber('event')->name('monitoring.update');
+    });
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
 
     // Projects
