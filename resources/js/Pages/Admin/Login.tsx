@@ -4,7 +4,7 @@ import { Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function Login() {
     const { data, setData, post, processing, errors } = useForm({
-        email: 'mehmetardad068@gmail.com',
+        email: '',
         password: '',
         remember: true,
     });
@@ -49,7 +49,8 @@ export default function Login() {
                                     value={data.email}
                                     onChange={(e) => setData('email', e.target.value)}
                                     className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:ring-2 focus:ring-blue-600 focus:outline-hidden"
-                                    placeholder="admin@mehmetarda.studio"
+                                    placeholder="E-posta adresinizi girin"
+                                    autoComplete="off"
                                     required
                                 />
                             </div>
