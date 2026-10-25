@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T14:52:09.8464593Z",
+  "title": "Design System: Mehmet Arda Studio — Monitoring",
+  "extensions": {
+    "colorMeta": {
+      "monitor-bg": {
+        "role": "neutral",
+        "displayName": "monitor bg",
+        "tonalRamp": [
+          "oklch(15% 0.0417 259.25)",
+          "oklch(26% 0.0417 259.25)",
+          "oklch(38% 0.0417 259.25)",
+          "oklch(49% 0.0417 259.25)",
+          "oklch(61% 0.0417 259.25)",
+          "oklch(72% 0.0417 259.25)",
+          "oklch(84% 0.0417 259.25)",
+          "oklch(95% 0.0417 259.25)"
+        ]
+      },
+      "monitor-panel": {
+        "role": "neutral",
+        "displayName": "monitor panel",
+        "tonalRamp": [
+          "oklch(15% 0.0451 258.28)",
+          "oklch(26% 0.0451 258.28)",
+          "oklch(38% 0.0451 258.28)",
+          "oklch(49% 0.0451 258.28)",
+          "oklch(61% 0.0451 258.28)",
+          "oklch(72% 0.0451 258.28)",
+          "oklch(84% 0.0451 258.28)",
+          "oklch(95% 0.0451 258.28)"
+        ]
+      },
+      "monitor-line": {
+        "role": "neutral",
+        "displayName": "monitor line",
+        "tonalRamp": [
+          "oklch(15% 0.0513 256.41)",
+          "oklch(26% 0.0513 256.41)",
+          "oklch(38% 0.0513 256.41)",
+          "oklch(49% 0.0513 256.41)",
+          "oklch(61% 0.0513 256.41)",
+          "oklch(72% 0.0513 256.41)",
+          "oklch(84% 0.0513 256.41)",
+          "oklch(95% 0.0513 256.41)"
+        ]
+      },
+      "monitor-text": {
+        "role": "neutral",
+        "displayName": "monitor text",
+        "tonalRamp": [
+          "oklch(15% 0.0165 259.42)",
+          "oklch(26% 0.0165 259.42)",
+          "oklch(38% 0.0165 259.42)",
+          "oklch(49% 0.0165 259.42)",
+          "oklch(61% 0.0165 259.42)",
+          "oklch(72% 0.0165 259.42)",
+          "oklch(84% 0.0165 259.42)",
+          "oklch(95% 0.0165 259.42)"
+        ]
+      },
+      "monitor-muted": {
+        "role": "neutral",
+        "displayName": "monitor muted",
+        "tonalRamp": [
+          "oklch(15% 0.0372 252.12)",
+          "oklch(26% 0.0372 252.12)",
+          "oklch(38% 0.0372 252.12)",
+          "oklch(49% 0.0372 252.12)",
+          "oklch(61% 0.0372 252.12)",
+          "oklch(72% 0.0372 252.12)",
+          "oklch(84% 0.0372 252.12)",
+          "oklch(95% 0.0372 252.12)"
+        ]
+      },
+      "monitor-accent": {
+        "role": "primary",
+        "displayName": "monitor accent",
+        "tonalRamp": [
+          "oklch(15% 0.1021 252.14)",
+          "oklch(26% 0.1021 252.14)",
+          "oklch(38% 0.1021 252.14)",
+          "oklch(49% 0.1021 252.14)",
+          "oklch(61% 0.1021 252.14)",
+          "oklch(72% 0.1021 252.14)",
+          "oklch(84% 0.1021 252.14)",
+          "oklch(95% 0.1021 252.14)"
+        ]
+      },
+      "traffic-bar": {
+        "role": "primary",
+        "displayName": "traffic bar",
+        "tonalRamp": [
+          "oklch(15% 0.1240 254.32)",
+          "oklch(26% 0.1240 254.32)",
+          "oklch(38% 0.1240 254.32)",
+          "oklch(49% 0.1240 254.32)",
+          "oklch(61% 0.1240 254.32)",
+          "oklch(72% 0.1240 254.32)",
+          "oklch(84% 0.1240 254.32)",
+          "oklch(95% 0.1240 254.32)"
+        ]
+      },
+      "log-bg": {
+        "role": "neutral",
+        "displayName": "log bg",
+        "tonalRamp": [
+          "oklch(15% 0.0359 259.45)",
+          "oklch(26% 0.0359 259.45)",
+          "oklch(38% 0.0359 259.45)",
+          "oklch(49% 0.0359 259.45)",
+          "oklch(61% 0.0359 259.45)",
+          "oklch(72% 0.0359 259.45)",
+          "oklch(84% 0.0359 259.45)",
+          "oklch(95% 0.0359 259.45)"
+        ]
+      },
+      "inspector-bg": {
+        "role": "neutral",
+        "displayName": "inspector bg",
+        "tonalRamp": [
+          "oklch(15% 0.0467 257.86)",
+          "oklch(26% 0.0467 257.86)",
+          "oklch(38% 0.0467 257.86)",
+          "oklch(49% 0.0467 257.86)",
+          "oklch(61% 0.0467 257.86)",
+          "oklch(72% 0.0467 257.86)",
+          "oklch(84% 0.0467 257.86)",
+          "oklch(95% 0.0467 257.86)"
+        ]
+      },
+      "control-bg": {
+        "role": "neutral",
+        "displayName": "control bg",
+        "tonalRamp": [
+          "oklch(15% 0.0487 256.29)",
+          "oklch(26% 0.0487 256.29)",
+          "oklch(38% 0.0487 256.29)",
+          "oklch(49% 0.0487 256.29)",
+          "oklch(61% 0.0487 256.29)",
+          "oklch(72% 0.0487 256.29)",
+          "oklch(84% 0.0487 256.29)",
+          "oklch(95% 0.0487 256.29)"
+        ]
+      },
+      "control-text": {
+        "role": "neutral",
+        "displayName": "control text",
+        "tonalRamp": [
+          "oklch(15% 0.0263 257.03)",
+          "oklch(26% 0.0263 257.03)",
+          "oklch(38% 0.0263 257.03)",
+          "oklch(49% 0.0263 257.03)",
+          "oklch(61% 0.0263 257.03)",
+          "oklch(72% 0.0263 257.03)",
+          "oklch(84% 0.0263 257.03)",
+          "oklch(95% 0.0263 257.03)"
+        ]
+      },
+      "field-bg": {
+        "role": "neutral",
+        "displayName": "field bg",
+        "tonalRamp": [
+          "oklch(15% 0.0489 257.49)",
+          "oklch(26% 0.0489 257.49)",
+          "oklch(38% 0.0489 257.49)",
+          "oklch(49% 0.0489 257.49)",
+          "oklch(61% 0.0489 257.49)",
+          "oklch(72% 0.0489 257.49)",
+          "oklch(84% 0.0489 257.49)",
+          "oklch(95% 0.0489 257.49)"
+        ]
+      },
+      "control-line": {
+        "role": "neutral",
+        "displayName": "control line",
+        "tonalRamp": [
+          "oklch(15% 0.0594 255.16)",
+          "oklch(26% 0.0594 255.16)",
+          "oklch(38% 0.0594 255.16)",
+          "oklch(49% 0.0594 255.16)",
+          "oklch(61% 0.0594 255.16)",
+          "oklch(72% 0.0594 255.16)",
+          "oklch(84% 0.0594 255.16)",
+          "oklch(95% 0.0594 255.16)"
+        ]
+      },
+      "control-hover": {
+        "role": "neutral",
+        "displayName": "control hover",
+        "tonalRamp": [
+          "oklch(15% 0.0626 254.53)",
+          "oklch(26% 0.0626 254.53)",
+          "oklch(38% 0.0626 254.53)",
+          "oklch(49% 0.0626 254.53)",
+          "oklch(61% 0.0626 254.53)",
+          "oklch(72% 0.0626 254.53)",
+          "oklch(84% 0.0626 254.53)",
+          "oklch(95% 0.0626 254.53)"
+        ]
+      },
+      "row-selected": {
+        "role": "neutral",
+        "displayName": "row selected",
+        "tonalRamp": [
+          "oklch(15% 0.0616 254.80)",
+          "oklch(26% 0.0616 254.80)",
+          "oklch(38% 0.0616 254.80)",
+          "oklch(49% 0.0616 254.80)",
+          "oklch(61% 0.0616 254.80)",
+          "oklch(72% 0.0616 254.80)",
+          "oklch(84% 0.0616 254.80)",
+          "oklch(95% 0.0616 254.80)"
+        ]
+      },
+      "shell-white": {
+        "role": "neutral",
+        "displayName": "shell white",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "info-text": {
+        "role": "neutral",
+        "displayName": "info text",
+        "tonalRamp": [
+          "oklch(15% 0.0767 251.09)",
+          "oklch(26% 0.0767 251.09)",
+          "oklch(38% 0.0767 251.09)",
+          "oklch(49% 0.0767 251.09)",
+          "oklch(61% 0.0767 251.09)",
+          "oklch(72% 0.0767 251.09)",
+          "oklch(84% 0.0767 251.09)",
+          "oklch(95% 0.0767 251.09)"
+        ]
+      },
+      "info-bg": {
+        "role": "neutral",
+        "displayName": "info bg",
+        "tonalRamp": [
+          "oklch(15% 0.0647 253.24)",
+          "oklch(26% 0.0647 253.24)",
+          "oklch(38% 0.0647 253.24)",
+          "oklch(49% 0.0647 253.24)",
+          "oklch(61% 0.0647 253.24)",
+          "oklch(72% 0.0647 253.24)",
+          "oklch(84% 0.0647 253.24)",
+          "oklch(95% 0.0647 253.24)"
+        ]
+      },
+      "success-text": {
+        "role": "neutral",
+        "displayName": "success text",
+        "tonalRamp": [
+          "oklch(15% 0.0895 169.65)",
+          "oklch(26% 0.0895 169.65)",
+          "oklch(38% 0.0895 169.65)",
+          "oklch(49% 0.0895 169.65)",
+          "oklch(61% 0.0895 169.65)",
+          "oklch(72% 0.0895 169.65)",
+          "oklch(84% 0.0895 169.65)",
+          "oklch(95% 0.0895 169.65)"
+        ]
+      },
+      "success-bg": {
+        "role": "neutral",
+        "displayName": "success bg",
+        "tonalRamp": [
+          "oklch(15% 0.0472 177.94)",
+          "oklch(26% 0.0472 177.94)",
+          "oklch(38% 0.0472 177.94)",
+          "oklch(49% 0.0472 177.94)",
+          "oklch(61% 0.0472 177.94)",
+          "oklch(72% 0.0472 177.94)",
+          "oklch(84% 0.0472 177.94)",
+          "oklch(95% 0.0472 177.94)"
+        ]
+      },
+      "warning-text": {
+        "role": "neutral",
+        "displayName": "warning text",
+        "tonalRamp": [
+          "oklch(15% 0.0877 75.23)",
+          "oklch(26% 0.0877 75.23)",
+          "oklch(38% 0.0877 75.23)",
+          "oklch(49% 0.0877 75.23)",
+          "oklch(61% 0.0877 75.23)",
+          "oklch(72% 0.0877 75.23)",
+          "oklch(84% 0.0877 75.23)",
+          "oklch(95% 0.0877 75.23)"
+        ]
+      },
+      "warning-bg": {
+        "role": "neutral",
+        "displayName": "warning bg",
+        "tonalRamp": [
+          "oklch(15% 0.0471 72.82)",
+          "oklch(26% 0.0471 72.82)",
+          "oklch(38% 0.0471 72.82)",
+          "oklch(49% 0.0471 72.82)",
+          "oklch(61% 0.0471 72.82)",
+          "oklch(72% 0.0471 72.82)",
+          "oklch(84% 0.0471 72.82)",
+          "oklch(95% 0.0471 72.82)"
+        ]
+      },
+      "error-text": {
+        "role": "neutral",
+        "displayName": "error text",
+        "tonalRamp": [
+          "oklch(15% 0.0827 18.93)",
+          "oklch(26% 0.0827 18.93)",
+          "oklch(38% 0.0827 18.93)",
+          "oklch(49% 0.0827 18.93)",
+          "oklch(61% 0.0827 18.93)",
+          "oklch(72% 0.0827 18.93)",
+          "oklch(84% 0.0827 18.93)",
+          "oklch(95% 0.0827 18.93)"
+        ]
+      },
+      "error-bg": {
+        "role": "neutral",
+        "displayName": "error bg",
+        "tonalRamp": [
+          "oklch(15% 0.0481 1.42)",
+          "oklch(26% 0.0481 1.42)",
+          "oklch(38% 0.0481 1.42)",
+          "oklch(49% 0.0481 1.42)",
+          "oklch(61% 0.0481 1.42)",
+          "oklch(72% 0.0481 1.42)",
+          "oklch(84% 0.0481 1.42)",
+          "oklch(95% 0.0481 1.42)"
+        ]
+      },
+      "critical-bg": {
+        "role": "neutral",
+        "displayName": "critical bg",
+        "tonalRamp": [
+          "oklch(15% 0.1511 16.20)",
+          "oklch(26% 0.1511 16.20)",
+          "oklch(38% 0.1511 16.20)",
+          "oklch(49% 0.1511 16.20)",
+          "oklch(61% 0.1511 16.20)",
+          "oklch(72% 0.1511 16.20)",
+          "oklch(84% 0.1511 16.20)",
+          "oklch(95% 0.1511 16.20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "purpose": "Main route heading; 22px below 768px.",
+        "displayName": "Monitoring headline"
+      },
+      "title": {
+        "purpose": "Event-feed section heading.",
+        "displayName": "Feed section title"
+      },
+      "body": {
+        "purpose": "Inherited sans type inside monitoring.",
+        "displayName": "Monitoring body"
+      },
+      "label": {
+        "purpose": "Visible field labels and explanatory text.",
+        "displayName": "Supporting label"
+      },
+      "timestamp": {
+        "purpose": "Terminal time notation; implementation also uses monospace for severity and JSON.",
+        "displayName": "Event timestamp"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "purpose": "Monitoring controls; disabled under prefers-reduced-motion: reduce.",
+        "name": "control-color-transition",
+        "value": "background-color .15s, color .15s"
+      }
+    ],
+    "breakpoints": [
+      {
+        "value": "1399px",
+        "name": "stack-inspector"
+      },
+      {
+        "value": "767px",
+        "name": "mobile-monitoring"
+      },
+      {
+        "value": "1280px",
+        "name": "detail-row-compact"
+      }
+    ],
+    "tonalRampNote": "Ramps are synthesized OKLCH visualization metadata, not implemented token scales. Primitives remain authoritative in DESIGN.md."
+  },
+  "components": [
+    {
+      "name": "Monitoring action",
+      "kind": "button",
+      "refersTo": "button-action",
+      "description": "Compact operational action, as used for pause and CSV export.",
+      "html": "<button class=\"ds-action\">Duraklat</button>",
+      "css": ".ds-action{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#17283f;color:#e2eeff;border:1px solid #3b5372;border-radius:7px;padding:8px 11px;font-size:12px;font-weight:600;cursor:pointer;transition:background-color .15s,color .15s}.ds-action:hover:not(:disabled){background:#243d5c}.ds-action:focus-visible{outline:2px solid #8ec3ff;outline-offset:3px}.ds-action:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-action{transition:none}}"
+    },
+    {
+      "name": "Filter field",
+      "kind": "input",
+      "refersTo": "input-filter",
+      "description": "Visible-label dark filter input.",
+      "html": "<label class=\"ds-field\">Metin ara<input placeholder=\"Açıklama, olay veya sayfa…\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px;font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;color:#b6c9df}.ds-field input{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;border:1px solid #3b5372;border-radius:7px;background:#13233a;color:#edf4ff;padding:9px 10px;font-size:12px;height:38px;min-width:0}.ds-field input::placeholder{color:#a6bed8}.ds-field input:focus-visible{outline:2px solid #8ec3ff;outline-offset:3px}"
+    },
+    {
+      "name": "Monitoring tabs",
+      "kind": "nav",
+      "description": "All-events and security views; active state has an accent underline.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"İzleme bölümü\"><button class=\"ds-active\" aria-current=\"page\">Tüm olaylar</button><button>Güvenlik</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:6px;background:#0c182b}.ds-tabs button{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;cursor:pointer;background:transparent;border:0;border-bottom:2px solid transparent;color:#b6c9df;font-size:13px;font-weight:650;padding:15px 14px;transition:background-color .15s,color .15s}.ds-tabs .ds-active{color:#edf4ff;border-bottom-color:#8ec3ff}.ds-tabs button:hover{background:#243d5c}.ds-tabs button:focus-visible{outline:2px solid #8ec3ff;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-tabs button{transition:none}}"
+    },
+    {
+      "name": "Error severity",
+      "kind": "chip",
+      "refersTo": "chip-error",
+      "description": "Literal semantic severity label, not an action.",
+      "html": "<span class=\"ds-severity\">ERROR</span>",
+      "css": ".ds-severity{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;font-weight:700;display:inline-flex;border-radius:4px;padding:3px 6px;letter-spacing:.02em;color:#ffb8b8;background:#472831}"
+    },
+    {
+      "name": "Event workspace",
+      "kind": "card",
+      "refersTo": "card-workspace",
+      "description": "Recessed, bordered container for the scrollable feed.",
+      "html": "<section class=\"ds-workspace\"><div class=\"ds-loghead\">ZAMAN · SEVİYE · OLAY / AÇIKLAMA</div><p class=\"ds-empty\">Bu görünümde kayıt yok</p></section>",
+      "css": ".ds-workspace{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;border:1px solid #2d405a;border-radius:10px;overflow:hidden;background:#0a1424;color:#edf4ff}.ds-loghead{background:#17263d;padding:11px 15px;font-size:10px;letter-spacing:.055em;color:#b6c9df;font-weight:600}.ds-empty{padding:30px;text-align:center;color:#b6c9df;font-size:12px}"
+    },
+    {
+      "name": "Connection state",
+      "kind": "custom",
+      "description": "Visible polling cadence beside a semantic status dot.",
+      "html": "<div class=\"ds-connection\" role=\"status\"><span class=\"ds-dot\"></span>8 sn aralıkla bağlı</div>",
+      "css": ".ds-connection{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:flex;align-items:center;gap:8px;color:#9aebce;background:#0c182b;font-size:12px;padding:12px;white-space:nowrap}.ds-dot{width:7px;height:7px;border-radius:50%;background:#6de0b4;display:inline-block}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Operate",
+    "overview": "This is an evidence-based record of `/admin/izleme`, including its security-category view, and the existing admin shell immediately around it. It is not a redesign specification for the public site or other admin pages. No PRODUCT.md was supplied, so this document makes no broader product or audience claims.\n\nThe monitoring center is a dense navy operations surface inside the incumbent white sidebar and topbar. Clear numeric summaries, measured traffic bars, labeled severity, and a selectable event feed lead to an inspector for record details and triage. The dark content region is the confirmed surface direction; it does not replace the surrounding identity.",
+    "keyCharacteristics": [
+      "White incumbent navigation around a contained navy monitoring surface.",
+      "Pale-blue traffic bars and restrained operational accents.",
+      "Explicit connection cadence, readable severity labels, and actionable records.",
+      "A stacked mobile flow with the inspector below the feed."
+    ],
+    "rules": [
+      {
+        "name": "The Contained Navy Rule",
+        "body": "Keep monitoring's dark palette within its content surface; retain the existing white admin shell.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the white incumbent shell around the navy monitoring content.",
+      "**Do** pair severity colors with explicit severity text.",
+      "**Do** retain polling cadence, paused/history states, and measurement caveats.",
+      "**Do** stack the inspector and wrap record content at narrow widths.",
+      "**Do** use real returned traffic buckets and meaningful empty states."
+    ],
+    "donts": [
+      "**Don't** apply this route's dark palette to the public site or unrelated admin pages.",
+      "**Don't** add decorative charts, invented metrics, or generated illustrations to this operational surface.",
+      "**Don't** expand monospace into ordinary headings, metrics, or descriptive copy.",
+      "**Don't** imply browser reports verify delivery, unique people, or attack detection."
+    ]
+  }
+}
