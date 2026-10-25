@@ -3,10 +3,12 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicImageController;
 use Illuminate\Support\Facades\Route;
 
 // Public Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/media/{id}', [PublicImageController::class, 'show'])->whereUuid('id')->name('media.show');
 Route::get('/projeler/{slug}', [HomeController::class, 'projectDetail'])->name('project.detail');
 Route::post('/iletisim', [HomeController::class, 'contact'])
     ->middleware('throttle:10,1')

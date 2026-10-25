@@ -7,7 +7,7 @@ use App\Models\Project;
 use App\Models\Service;
 use App\Models\SiteSetting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Services\PublicImageStorage;
 use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -58,8 +58,7 @@ class AdminController extends Controller
 
         $imagePath = '/images/projects/project-1.svg';
         if ($request->hasFile('image_file')) {
-            $path = $request->file('image_file')->store('projects', 'public');
-            $imagePath = '/storage/' . $path;
+            $imagePath = PublicImageStorage::store($request->file('image_file'));
         }
 
         $technologies = is_array($request->technologies) 
@@ -99,8 +98,7 @@ class AdminController extends Controller
         ]);
 
         if ($request->hasFile('image_file')) {
-            $path = $request->file('image_file')->store('projects', 'public');
-            $project->image = '/storage/' . $path;
+            $project->image = PublicImageStorage::store($request->file('image_file'));
         }
 
         $technologies = is_array($request->technologies) 
@@ -242,18 +240,20 @@ class AdminController extends Controller
 
     public function updateSettings(Request $request)
     {
+        $request->validate([
+            'profile_image_file' => 'nullable|image|max:4096',
+            'site_logo_file' => 'nullable|image|max:4096',
+        ]);
         $data = $request->except(['_token', 'profile_image_file', 'site_logo_file']);
 
         // Profil fotoğrafı yükleme
         if ($request->hasFile('profile_image_file')) {
-            $path = $request->file('profile_image_file')->store('settings', 'public');
-            SiteSetting::set('profile_image', '/storage/' . $path);
+            SiteSetting::set('profile_image', PublicImageStorage::store($request->file('profile_image_file')));
         }
 
         // Logo yükleme
         if ($request->hasFile('site_logo_file')) {
-            $path = $request->file('site_logo_file')->store('settings', 'public');
-            SiteSetting::set('site_logo', '/storage/' . $path);
+            SiteSetting::set('site_logo', PublicImageStorage::store($request->file('site_logo_file')));
         }
 
         foreach ($data as $key => $value) {
