@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head } from '@inertiajs/react';
+import SeoHead, { type SeoData } from '../Components/SeoHead';
 import Navbar from '../Components/Navbar';
 import Hero from '../Components/Hero';
 import About from '../Components/About';
@@ -16,74 +16,13 @@ interface HomeProps {
     services: Service[];
     projects: Project[];
     settings: SiteSettings;
+    seo: SeoData;
 }
 
-export default function Home({ services = [], projects = [], settings = {} }: HomeProps) {
-    const metaTitle = settings.meta_title || 'MEHMET ARDA STUDIO — Premium Web Tasarım ve Yazılım Ajansı';
-    const metaDescription = settings.meta_description || 'Mehmet Arda Studio ile markanız için modern web tasarım, güçlü yazılım altyapıları ve özgün dijital deneyimler geliştiriyoruz.';
-    const metaKeywords = settings.meta_keywords || 'Mehmet Arda Studio, Mehmet Arda Web Tasarım, Profesyonel Web Tasarım, Kurumsal Web Sitesi Tasarımı, Web Yazılım Hizmetleri';
-
-    const schemaData = {
-        '@context': 'https://schema.org',
-        '@type': 'ProfessionalService',
-        'name': 'Mehmet Arda Studio',
-        'image': 'https://mehmetarda.studio/images/logo.svg',
-        'url': 'https://mehmetarda.studio',
-        'telephone': settings.phone || '0531 466 89 27',
-        'email': settings.email || 'mehmetardad068@gmail.com',
-        'priceRange': '$$',
-        'founder': {
-            '@type': 'Person',
-            'name': 'Mehmet Arda',
-            'jobTitle': 'Web Developer & Designer',
-        },
-        'description': metaDescription,
-        'sameAs': [
-            settings.instagram || 'https://www.instagram.com/mehmetardastudio/',
-        ],
-        'serviceArea': {
-            '@type': 'Country',
-            'name': 'Turkey',
-        },
-        'hasOfferCatalog': {
-            '@type': 'OfferCatalog',
-            'name': 'Dijital Ajans Hizmetleri',
-            'itemListElement': services.map((s, index) => ({
-                '@type': 'Offer',
-                'itemOffered': {
-                    '@type': 'Service',
-                    'name': s.title,
-                    'description': s.short_description,
-                },
-                'position': index + 1,
-            })),
-        },
-    };
-
+export default function Home({ services = [], projects = [], settings = {}, seo }: HomeProps) {
     return (
         <div className="min-h-screen bg-white text-[#334155] selection:bg-[#155DFC] selection:text-white flex flex-col font-sans">
-            <Head>
-                <title>{metaTitle}</title>
-                <meta name="description" content={metaDescription} />
-                <meta name="keywords" content={metaKeywords} />
-                <meta name="author" content="Mehmet Arda" />
-                <link rel="canonical" href="https://mehmetarda.studio" />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://mehmetarda.studio" />
-                <meta property="og:title" content={metaTitle} />
-                <meta property="og:description" content={metaDescription} />
-                <meta property="og:image" content="https://mehmetarda.studio/images/logo.svg" />
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={metaTitle} />
-                <meta name="twitter:description" content={metaDescription} />
-                <meta name="twitter:image" content="https://mehmetarda.studio/images/logo.svg" />
-
-                <script type="application/ld+json">
-                    {JSON.stringify(schemaData)}
-                </script>
-            </Head>
+            <SeoHead seo={seo} />
 
             {/* Navbar */}
             <Navbar siteLogo={settings.site_logo} />

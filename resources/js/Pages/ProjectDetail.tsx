@@ -1,5 +1,5 @@
 import React from 'react';
-import { Head, Link } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import {
     ArrowLeft,
     ArrowUpRight,
@@ -13,6 +13,7 @@ import {
     ShieldCheck,
     Cpu,
 } from 'lucide-react';
+import SeoHead, { type SeoData } from '../Components/SeoHead';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { Project, SiteSettings } from '../types';
@@ -21,17 +22,14 @@ interface ProjectDetailProps {
     project: Project;
     relatedProjects: Project[];
     settings: SiteSettings;
+    seo: SeoData;
 }
 
-export default function ProjectDetail({ project, relatedProjects = [], settings = {} }: ProjectDetailProps) {
-    const pageTitle = `${project.title} — Mehmet Arda Studio`;
+export default function ProjectDetail({ project, relatedProjects = [], settings = {}, seo }: ProjectDetailProps) {
 
     return (
         <div className="min-h-screen bg-white text-[#334155] selection:bg-[#155DFC] selection:text-white flex flex-col font-sans">
-            <Head>
-                <title>{pageTitle}</title>
-                <meta name="description" content={project.description} />
-            </Head>
+            <SeoHead seo={seo} />
 
             <Navbar siteLogo={settings.site_logo} />
 

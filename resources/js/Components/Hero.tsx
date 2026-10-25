@@ -74,7 +74,7 @@ export default function Hero({
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#155DFC]"></span>
                             </span>
                             <span className="text-xs font-bold text-[#080F20] tracking-wide">
-                                Premium Web Tasarım &amp; Yazılım Ajansı
+                                Mersin Web Tasarım &amp; Yazılım
                             </span>
                         </motion.div>
 
@@ -85,11 +85,11 @@ export default function Hero({
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="text-4xl sm:text-6xl lg:text-[68px] font-black text-[#080F20] tracking-tight leading-[1.06]"
                         >
-                            <span>Dijital Fikirleri</span>{' '}
+                            <span>Mersin Web Tasarım</span>{' '}
                             <span className="block mt-1 bg-gradient-to-r from-[#155DFC] via-[#2563EB] to-[#6D28D9] bg-clip-text text-transparent">
-                                Etkileyici Deneyimlere
+                                Markanıza Özel
                             </span>{' '}
-                            <span className="block mt-1">Dönüştürüyoruz.</span>
+                            <span className="block mt-1">Dijital Deneyimler.</span>
                         </motion.h1>
 
                         {/* Description with High-Contrast Slate-700 */}
@@ -99,7 +99,7 @@ export default function Hero({
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-base sm:text-lg text-[#334155] leading-relaxed max-w-2xl font-medium"
                         >
-                            Mehmet Arda Studio ile markanız için modern web tasarım, güçlü yazılım altyapıları ve özgün dijital deneyimler geliştiriyoruz.
+                            Mehmet Arda Studio (ArdaCode) ile Mersin’deki işletmeler ve Türkiye genelindeki markalar için mobil uyumlu kurumsal web siteleri, e-ticaret çözümleri ve özel web yazılımları geliştiriyoruz.
                         </motion.p>
 
                         {/* CTA Buttons */}
@@ -176,7 +176,7 @@ export default function Hero({
                                         </div>
                                         <div className="bg-[#080F20] border border-slate-800 rounded-md px-3 py-1 flex items-center gap-2">
                                             <div className="w-2 h-2 rounded-full bg-[#155DFC] animate-pulse" />
-                                            <span className="text-[10px] font-mono text-slate-300">mehmetarda.studio/v2</span>
+                                            <span className="text-[10px] font-mono text-slate-300">ardacode.com.tr</span>
                                         </div>
                                         <span className="text-[9px] font-bold text-emerald-400 font-mono">● LIVE</span>
                                     </div>

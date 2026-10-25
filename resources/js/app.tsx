@@ -6,10 +6,8 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import AnalyticsConsent from './Components/AnalyticsConsent';
 import { installTelemetry } from './lib/telemetry';
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'MEHMET ARDA STUDIO';
-
 createInertiaApp({
-    title: (title) => (title ? `${title} — ${appName}` : appName),
+    title: (title) => title || 'MEHMET ARDA STUDIO',
     resolve: async (name) => {
         const page = await resolvePageComponent<{ default: ResolvedComponent }>(`./Pages/${name}.tsx`, import.meta.glob<{ default: ResolvedComponent }>('./Pages/**/*.tsx'));
         return page.default;

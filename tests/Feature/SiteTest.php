@@ -47,7 +47,7 @@ class SiteTest extends TestCase
     {
         $response = $this->get('/robots.txt');
         $response->assertStatus(200);
-        $response->assertSee('Disallow: /admin/');
+        $response->assertSee("Disallow: /admin\n", false);
     }
 
     public function test_contact_form_submission_and_validation(): void

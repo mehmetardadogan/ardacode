@@ -6,6 +6,7 @@ use App\Models\Message;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\SiteSetting;
+use App\Services\Seo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
@@ -33,6 +34,7 @@ class HomeController extends Controller
             'services' => $services,
             'projects' => $projects,
             'settings' => $settings,
+            'seo' => Seo::page($settings, $services),
         ]);
     }
 
@@ -54,6 +56,7 @@ class HomeController extends Controller
             'project' => $project,
             'relatedProjects' => $relatedProjects,
             'settings' => $settings,
+            'seo' => Seo::page($settings, [], $project),
         ]);
     }
 
@@ -100,22 +103,21 @@ class HomeController extends Controller
 
     public function sitemap()
     {
-        $baseUrl = url('/');
+        $baseUrl = Seo::url();
         $projects = Project::all();
 
         $xml = '<?xml version="1.0" encoding="UTF-8"?>';
         $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
         
         $xml .= '<url>';
-        $xml .= '<loc>' . $baseUrl . '</loc>';
-        $xml .= '<lastmod>' . date('Y-m-d') . '</lastmod>';
+        $xml .= '<loc>' . htmlspecialchars($baseUrl, ENT_XML1, 'UTF-8') . '</loc>';
         $xml .= '<changefreq>weekly</changefreq>';
         $xml .= '<priority>1.0</priority>';
         $xml .= '</url>';
 
         foreach ($projects as $project) {
             $xml .= '<url>';
-            $xml .= '<loc>' . $baseUrl . '/projeler/' . $project->slug . '</loc>';
+            $xml .= '<loc>' . htmlspecialchars(Seo::url('projeler/'.rawurlencode($project->slug)), ENT_XML1, 'UTF-8') . '</loc>';
             $xml .= '<lastmod>' . $project->updated_at->format('Y-m-d') . '</lastmod>';
             $xml .= '<changefreq>monthly</changefreq>';
             $xml .= '<priority>0.8</priority>';
@@ -129,7 +131,7 @@ class HomeController extends Controller
 
     public function robots()
     {
-        $content = "User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: " . url('/sitemap.xml');
+        $content = "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /login\nDisallow: /internal/\nDisallow: /izleme/\n\nSitemap: " . Seo::url('sitemap.xml')."\n";
         return response($content, 200)->header('Content-Type', 'text/plain');
     }
 }
