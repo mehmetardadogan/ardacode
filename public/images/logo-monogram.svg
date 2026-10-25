@@ -1,0 +1,34 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="monoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="monoStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155DFC"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155DFC"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base Frame -->
+  <rect x="8" y="8" width="240" height="240" rx="60" fill="url(#monoBg)"/>
+  <rect x="8" y="8" width="240" height="240" rx="60" stroke="#DCE3EE" stroke-width="4" stroke-opacity="0.15"/>
+
+  <!-- Geometric Interlocking 'MA' Vector Architecture -->
+  <g transform="translate(48, 52)">
+    <!-- Outer 'M' Pillars & Diagonal Peak -->
+    <path d="M 16 148 L 16 28 L 54 28 L 80 84 L 106 28 L 144 28 L 144 148 L 112 148 L 112 78 L 80 134 L 48 78 L 48 148 Z" 
+          fill="#FFFFFF" />
+    
+    <!-- Central 'A' Crossbar & Modern Dynamic Accent -->
+    <path d="M 52 108 L 108 108 L 108 126 L 52 126 Z" 
+          fill="url(#monoStroke)" />
+    
+    <!-- Floating Tech Cyber Dot -->
+    <circle cx="80" cy="18" r="8" fill="url(#accentGlow)"/>
+  </g>
+</svg>

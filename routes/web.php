@@ -1,0 +1,52 @@
+<?php
+
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Route;
+
+// Public Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/projeler/{slug}', [HomeController::class, 'projectDetail'])->name('project.detail');
+Route::post('/iletisim', [HomeController::class, 'contact'])
+    ->middleware('throttle:10,1')
+    ->name('contact.submit');
+
+Route::get('/sitemap.xml', [HomeController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [HomeController::class, 'robots'])->name('robots');
+
+// Admin Auth Routes
+Route::get('/admin/login', [AuthController::class, 'showLogin'])->name('login');
+Route::get('/login', fn () => redirect()->route('login'))->name('admin.login');
+Route::post('/admin/login', [AuthController::class, 'login'])
+    ->middleware('throttle:5,1')
+    ->name('admin.login.submit');
+Route::post('/admin/logout', [AuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('admin.logout');
+
+// Admin Protected Area
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+
+    // Projects
+    Route::get('/projeler', [AdminController::class, 'projects'])->name('projects');
+    Route::post('/projeler', [AdminController::class, 'storeProject'])->name('projects.store');
+    Route::post('/projeler/{id}', [AdminController::class, 'updateProject'])->name('projects.update');
+    Route::delete('/projeler/{id}', [AdminController::class, 'destroyProject'])->name('projects.destroy');
+
+    // Services
+    Route::get('/hizmetler', [AdminController::class, 'services'])->name('services');
+    Route::post('/hizmetler', [AdminController::class, 'storeService'])->name('services.store');
+    Route::put('/hizmetler/{id}', [AdminController::class, 'updateService'])->name('services.update');
+    Route::delete('/hizmetler/{id}', [AdminController::class, 'destroyService'])->name('services.destroy');
+
+    // Messages
+    Route::get('/mesajlar', [AdminController::class, 'messages'])->name('messages');
+    Route::post('/mesajlar/{id}/toggle', [AdminController::class, 'toggleMessageRead'])->name('messages.toggle');
+    Route::delete('/mesajlar/{id}', [AdminController::class, 'destroyMessage'])->name('messages.destroy');
+
+    // Settings & SEO
+    Route::get('/ayarlar', [AdminController::class, 'settings'])->name('settings');
+    Route::post('/ayarlar', [AdminController::class, 'updateSettings'])->name('settings.update');
+});

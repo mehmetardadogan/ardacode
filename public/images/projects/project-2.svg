@@ -1,0 +1,52 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="p2Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p2Bg)"/>
+  <circle cx="200" cy="150" r="260" fill="#155DFC" fill-opacity="0.2" filter="blur(80px)"/>
+  <circle cx="680" cy="380" r="220" fill="#6D28D9" fill-opacity="0.2" filter="blur(70px)"/>
+
+  <!-- Studio Display Monitor -->
+  <rect x="90" y="30" width="620" height="385" rx="16" fill="#080F20" stroke="#334155" stroke-width="2.5"/>
+  <circle cx="400" cy="42" r="3" fill="#10B981"/>
+
+  <!-- Monitor Screen Content -->
+  <rect x="102" y="55" width="596" height="348" rx="8" fill="#0B132B"/>
+
+  <!-- Real Estate Hero Site -->
+  <rect x="102" y="55" width="596" height="40" fill="#080F20"/>
+  <text x="125" y="80" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="900" letter-spacing="1">APEX LUXURY RESIDENCE</text>
+  <rect x="580" y="65" width="95" height="22" rx="6" fill="#155DFC"/>
+  <text x="600" y="80" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="700">360° Sanal Tur</text>
+
+  <!-- Big Visual Gallery Card Inside Mockup -->
+  <rect x="125" y="115" width="340" height="265" rx="12" fill="#1C2541" stroke="#3A506B"/>
+  <text x="145" y="155" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="900">Bosphorus Panoramic Villa</text>
+  <text x="145" y="180" fill="#94A3B8" font-family="sans-serif" font-size="12">Boğaz hattında modern mimari ve özel peyzaj tasarımı.</text>
+  <rect x="145" y="210" width="120" height="34" rx="8" fill="#155DFC"/>
+  <text x="165" y="232" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Katalog İndir</text>
+
+  <rect x="145" y="270" width="90" height="85" rx="8" fill="#0B132B"/>
+  <text x="160" y="305" fill="#38BDF8" font-family="sans-serif" font-size="18" font-weight="900">650 m²</text>
+  <text x="160" y="325" fill="#94A3B8" font-family="sans-serif" font-size="10">Yaşam Alanı</text>
+
+  <rect x="250" y="270" width="90" height="85" rx="8" fill="#0B132B"/>
+  <text x="265" y="305" fill="#10B981" font-family="sans-serif" font-size="18" font-weight="900">7+2</text>
+  <text x="265" y="325" fill="#94A3B8" font-family="sans-serif" font-size="10">Oda &amp; Salon</text>
+
+  <!-- Side Architectural Photos Inside Mockup -->
+  <rect x="480" y="115" width="200" height="125" rx="10" fill="#2E3856"/>
+  <circle cx="580" cy="177" r="30" fill="#155DFC" fill-opacity="0.3"/>
+  <text x="500" y="225" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Havuz &amp; Teras Görünümü</text>
+
+  <rect x="480" y="255" width="200" height="125" rx="10" fill="#2E3856"/>
+  <text x="500" y="365" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">İç Mekan &amp; Akıllı Ev</text>
+
+  <!-- Monitor Stand -->
+  <path d="M 370 415 L 430 415 L 440 470 L 360 470 Z" fill="#64748B"/>
+  <rect x="330" y="470" width="140" height="10" rx="4" fill="#475569"/>
+</svg>

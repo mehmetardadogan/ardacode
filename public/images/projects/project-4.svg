@@ -1,0 +1,66 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="p4Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#18181B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p4Bg)"/>
+  <circle cx="200" cy="150" r="260" fill="#6D28D9" fill-opacity="0.25" filter="blur(80px)"/>
+  <circle cx="650" cy="350" r="220" fill="#155DFC" fill-opacity="0.2" filter="blur(70px)"/>
+
+  <!-- Studio Display Monitor Frame -->
+  <rect x="90" y="30" width="620" height="385" rx="16" fill="#18181B" stroke="#3F3F46" stroke-width="2.5"/>
+  <circle cx="400" cy="42" r="3" fill="#10B981"/>
+
+  <!-- Screen Content -->
+  <rect x="102" y="55" width="596" height="348" rx="8" fill="#27272A"/>
+
+  <!-- Header -->
+  <text x="130" y="90" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="900" letter-spacing="1">VELOCE DESIGN SYSTEM</text>
+  <text x="130" y="108" fill="#A1A1AA" font-family="sans-serif" font-size="11">Enterprise UI Kit &amp; Identity Guidelines v3.0</text>
+
+  <!-- Color Swatches Row -->
+  <rect x="130" y="125" width="120" height="75" rx="8" fill="#155DFC"/>
+  <text x="145" y="180" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Primary Electric</text>
+  <text x="145" y="193" fill="#BFDBFE" font-family="monospace" font-size="9">#155DFC</text>
+
+  <rect x="265" y="125" width="120" height="75" rx="8" fill="#6D28D9"/>
+  <text x="280" y="180" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Accent Violet</text>
+  <text x="280" y="193" fill="#E9D5FF" font-family="monospace" font-size="9">#6D28D9</text>
+
+  <rect x="400" y="125" width="120" height="75" rx="8" fill="#10B981"/>
+  <text x="415" y="180" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Success Emerald</text>
+  <text x="415" y="193" fill="#D1FAE5" font-family="monospace" font-size="9">#10B981</text>
+
+  <rect x="535" y="125" width="135" height="75" rx="8" fill="#080F20" stroke="#3F3F46"/>
+  <text x="550" y="180" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Dark Noir</text>
+  <text x="550" y="193" fill="#94A3B8" font-family="monospace" font-size="9">#080F20</text>
+
+  <!-- Component Cards Bottom -->
+  <rect x="130" y="220" width="255" height="165" rx="10" fill="#18181B" stroke="#3F3F46"/>
+  <text x="150" y="245" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800">Typography Scale</text>
+  <text x="150" y="270" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900">Heading Display (48px)</text>
+  <text x="150" y="295" fill="#D4D4D8" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700">Subheading Medium (24px)</text>
+  <text x="150" y="320" fill="#A1A1AA" font-family="'Plus Jakarta Sans', sans-serif" font-size="11">Body text with optimal readability &amp; contrast</text>
+  
+  <rect x="150" y="340" width="110" height="30" rx="8" fill="#155DFC"/>
+  <text x="175" y="359" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="700">Button State</text>
+
+  <rect x="405" y="220" width="265" height="165" rx="10" fill="#18181B" stroke="#3F3F46"/>
+  <text x="425" y="245" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800">UI Kit Cards</text>
+  <rect x="425" y="260" width="110" height="105" rx="8" fill="#27272A"/>
+  <circle cx="480" cy="290" r="15" fill="#155DFC"/>
+  <rect x="440" y="320" width="80" height="8" rx="3" fill="#E4E4E7"/>
+  <rect x="440" y="335" width="55" height="6" rx="2" fill="#71717A"/>
+
+  <rect x="550" y="260" width="105" height="105" rx="8" fill="#27272A"/>
+  <circle cx="602" cy="290" r="15" fill="#6D28D9"/>
+  <rect x="562" y="320" width="80" height="8" rx="3" fill="#E4E4E7"/>
+  <rect x="562" y="335" width="55" height="6" rx="2" fill="#71717A"/>
+
+  <!-- Stand -->
+  <path d="M 370 415 L 430 415 L 440 470 L 360 470 Z" fill="#52525B"/>
+  <rect x="330" y="470" width="140" height="10" rx="4" fill="#3F3F46"/>
+</svg>

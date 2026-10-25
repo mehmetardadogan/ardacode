@@ -1,0 +1,31 @@
+<svg width="320" height="72" viewBox="0 0 320 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155DFC"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram Mark (Left) -->
+  <g transform="translate(6, 6)">
+    <rect width="60" height="60" rx="18" fill="url(#logoBg)"/>
+    <rect width="60" height="60" rx="18" stroke="#155DFC" stroke-width="2" stroke-opacity="0.6"/>
+
+    <!-- Interlocking MA -->
+    <path d="M 14 46 L 14 16 L 24 16 L 30 29 L 36 16 L 46 16 L 46 46 L 37 46 L 37 28 L 30 42 L 23 28 L 23 46 Z" fill="#FFFFFF"/>
+    <rect x="23" y="34" width="14" height="4" rx="2" fill="url(#logoBlue)"/>
+    <circle cx="30" cy="13" r="2.5" fill="#155DFC"/>
+  </g>
+
+  <!-- Typographic Logotype (Right) -->
+  <text x="82" y="36" fill="#080F20" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="900" letter-spacing="-0.03em">
+    MEHMET ARDA
+  </text>
+  <text x="82" y="54" fill="#155DFC" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="800" letter-spacing="0.28em">
+    STUDIO
+  </text>
+</svg>

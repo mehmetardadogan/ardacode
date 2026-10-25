@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.jsx';
+@source '../**/*.ts';
+@source '../**/*.tsx';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-brand-primary: #155DFC;
+    --color-brand-primary-hover: #0047D4;
+    --color-brand-secondary: #6D28D9;
+    --color-brand-heading: #080F20;
+    --color-brand-body: #334155;
+    --color-brand-bg: #FFFFFF;
+    --color-brand-alt: #F3F6FB;
+    --color-brand-border: #DCE3EE;
+    --color-brand-dark: #080F20;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        color-scheme: light;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        color: #334155;
+        background-color: #FFFFFF;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 800;
+        letter-spacing: -0.025em;
+    }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F3F6FB;
+}
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+/* Premium ambient glows */
+.glow-primary {
+    background: radial-gradient(circle at 50% 50%, rgba(21, 93, 252, 0.14) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.glow-purple {
+    background: radial-gradient(circle at 50% 50%, rgba(109, 40, 217, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Subtle modern dot & grid patterns */
+.bg-grid-tech {
+    background-image: 
+        linear-gradient(to right, rgba(8, 15, 32, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(8, 15, 32, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.bg-dots-pattern {
+    background-image: radial-gradient(rgba(21, 93, 252, 0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Glassmorphism */
+.glass-header {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(220, 227, 238, 0.8);
+}

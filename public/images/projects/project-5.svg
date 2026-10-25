@@ -1,0 +1,69 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="p5Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p5Bg)"/>
+  <circle cx="200" cy="150" r="260" fill="#10B981" fill-opacity="0.18" filter="blur(80px)"/>
+  <circle cx="650" cy="350" r="220" fill="#155DFC" fill-opacity="0.2" filter="blur(70px)"/>
+
+  <!-- Laptop Display Frame -->
+  <rect x="80" y="40" width="640" height="390" rx="18" fill="#1E293B" stroke="#475569" stroke-width="2.5"/>
+  <rect x="88" y="48" width="624" height="374" rx="14" fill="#080F20"/>
+  <circle cx="400" cy="54" r="2.5" fill="#10B981"/>
+
+  <!-- Screen Content -->
+  <g clip-path="url(#p5Clip)">
+    <clipPath id="p5Clip">
+      <rect x="96" y="66" width="608" height="346" rx="8"/>
+    </clipPath>
+    <rect x="96" y="66" width="608" height="346" fill="#080F20"/>
+
+    <!-- App Header -->
+    <rect x="96" y="66" width="608" height="40" fill="#0F172A"/>
+    <text x="120" y="91" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900">KURA FINTECH ENGINE</text>
+    <rect x="580" y="76" width="105" height="20" rx="6" fill="#10B981" fill-opacity="0.2"/>
+    <text x="592" y="90" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">● 2FA SECURE</text>
+
+    <!-- Balance Card -->
+    <rect x="120" y="120" width="260" height="120" rx="10" fill="#0F172A" stroke="#1E293B"/>
+    <text x="140" y="145" fill="#94A3B8" font-family="sans-serif" font-size="11">Toplam Portföy Değeri</text>
+    <text x="140" y="185" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900">₺ 4,280,500</text>
+    <text x="140" y="215" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="700">▲ +18.4% (Son 30 Gün)</text>
+
+    <!-- Quick Transfer Card -->
+    <rect x="400" y="120" width="280" height="120" rx="10" fill="#0F172A" stroke="#1E293B"/>
+    <text x="420" y="145" fill="#94A3B8" font-family="sans-serif" font-size="11">Anlık Arbitraj &amp; Döviz Transferi</text>
+    <rect x="420" y="160" width="240" height="32" rx="6" fill="#080F20" stroke="#334155"/>
+    <text x="435" y="180" fill="#E2E8F0" font-family="sans-serif" font-size="11">10,000 USD → 342,000 TRY</text>
+    <rect x="420" y="200" width="110" height="26" rx="6" fill="#155DFC"/>
+    <text x="450" y="217" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="700">İşlemi Onayla</text>
+
+    <!-- Financial Candlestick / Bar Chart -->
+    <rect x="120" y="255" width="560" height="140" rx="10" fill="#0F172A" stroke="#1E293B"/>
+    <!-- Bars -->
+    <g transform="translate(130, 265)">
+      <rect x="20" y="70" width="14" height="45" rx="2" fill="#10B981"/>
+      <rect x="55" y="50" width="14" height="65" rx="2" fill="#10B981"/>
+      <rect x="90" y="80" width="14" height="35" rx="2" fill="#EF4444"/>
+      <rect x="125" y="40" width="14" height="75" rx="2" fill="#10B981"/>
+      <rect x="160" y="30" width="14" height="85" rx="2" fill="#10B981"/>
+      <rect x="195" y="65" width="14" height="50" rx="2" fill="#EF4444"/>
+      <rect x="230" y="25" width="14" height="90" rx="2" fill="#10B981"/>
+      <rect x="265" y="15" width="14" height="100" rx="2" fill="#10B981"/>
+      <rect x="300" y="45" width="14" height="70" rx="2" fill="#EF4444"/>
+      <rect x="335" y="10" width="14" height="105" rx="2" fill="#10B981"/>
+      <rect x="370" y="15" width="14" height="100" rx="2" fill="#10B981"/>
+      <rect x="405" y="5" width="14" height="110" rx="2" fill="#10B981"/>
+      <rect x="440" y="20" width="14" height="95" rx="2" fill="#10B981"/>
+      <rect x="475" y="0" width="14" height="115" rx="2" fill="#10B981"/>
+    </g>
+  </g>
+
+  <!-- Laptop Base -->
+  <path d="M 40 430 L 760 430 L 710 455 L 90 455 Z" fill="#64748B"/>
+  <rect x="350" y="432" width="100" height="5" rx="2.5" fill="#334155"/>
+</svg>

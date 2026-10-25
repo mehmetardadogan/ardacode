@@ -1,0 +1,48 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="p6Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#p6Bg)"/>
+  <circle cx="200" cy="150" r="260" fill="#155DFC" fill-opacity="0.2" filter="blur(80px)"/>
+  <circle cx="680" cy="380" r="220" fill="#64748B" fill-opacity="0.2" filter="blur(70px)"/>
+
+  <!-- Studio Display Monitor Frame -->
+  <rect x="90" y="30" width="620" height="385" rx="16" fill="#080F20" stroke="#475569" stroke-width="2.5"/>
+  <circle cx="400" cy="42" r="3" fill="#10B981"/>
+
+  <!-- Monitor Screen Content -->
+  <rect x="102" y="55" width="596" height="348" rx="8" fill="#FFFFFF"/>
+
+  <!-- Architecture Wireframe Grid & Minimalist Portfolio -->
+  <rect x="102" y="55" width="596" height="42" fill="#F8FAFC"/>
+  <line x1="102" y1="97" x2="698" y2="97" stroke="#E2E8F0"/>
+  <text x="125" y="81" fill="#080F20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" letter-spacing="2">ARCHSTUDIO</text>
+  <text x="560" y="80" fill="#64748B" font-family="sans-serif" font-size="10">Kentsel &amp; İç Mimari</text>
+
+  <!-- Big Editorial Headline -->
+  <text x="125" y="140" fill="#080F20" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900">SPATIAL POETRY.</text>
+  <text x="125" y="162" fill="#64748B" font-family="sans-serif" font-size="12">Ödüllü Minimalist Mimarlık &amp; Çağdaş Mekan Çözümleri</text>
+
+  <!-- Gallery Grid (3 Columns) -->
+  <rect x="125" y="185" width="170" height="205" rx="8" fill="#080F20"/>
+  <path d="M 140 330 L 180 250 L 220 290 L 260 230 L 285 360 Z" fill="#334155" opacity="0.6"/>
+  <text x="140" y="365" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">Villa Bosphorus</text>
+
+  <rect x="315" y="185" width="200" height="205" rx="8" fill="#E2E8F0"/>
+  <rect x="330" y="205" width="170" height="90" rx="4" fill="#CBD5E1"/>
+  <text x="330" y="330" fill="#080F20" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900">Brutalist Loft</text>
+  <text x="330" y="350" fill="#64748B" font-family="sans-serif" font-size="11">İç Mimari &amp; Doğal Işık</text>
+
+  <rect x="535" y="185" width="145" height="205" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <circle cx="607" cy="260" r="35" fill="#155DFC" fill-opacity="0.15"/>
+  <text x="550" y="330" fill="#080F20" font-family="sans-serif" font-size="12" font-weight="800">2026 Tasarım</text>
+  <text x="550" y="350" fill="#155DFC" font-family="sans-serif" font-size="10" font-weight="700">Ödüllü Portföy</text>
+
+  <!-- Stand -->
+  <path d="M 370 415 L 430 415 L 440 470 L 360 470 Z" fill="#64748B"/>
+  <rect x="330" y="470" width="140" height="10" rx="4" fill="#475569"/>
+</svg>

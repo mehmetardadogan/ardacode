@@ -1,0 +1,39 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#155DFC"/>
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="ambientCircle" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#155DFC" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#080F20" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="400" rx="36" fill="url(#avatarBg)"/>
+  <rect x="2" y="2" width="396" height="396" rx="34" stroke="#DCE3EE" stroke-width="2" stroke-opacity="0.15"/>
+
+  <!-- Subtle glow -->
+  <circle cx="200" cy="180" r="140" fill="url(#ambientCircle)"/>
+
+  <!-- High-Tech Geometric Monogram Icon -->
+  <g transform="translate(110, 85)">
+    <!-- Shield / Hexagon Frame -->
+    <rect x="0" y="0" width="180" height="180" rx="40" fill="#080F20" fill-opacity="0.8" stroke="url(#innerGlow)" stroke-width="2.5"/>
+    
+    <!-- Stylized 'M' and 'A' Geometry -->
+    <path d="M 42 135 L 42 55 L 75 105 L 90 85 L 105 105 L 138 55 L 138 135" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 68 120 L 112 120" stroke="#155DFC" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="90" cy="50" r="6" fill="#155DFC"/>
+  </g>
+
+  <!-- Typography Badge -->
+  <text x="200" y="315" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="0.5">MEHMET ARDA</text>
+  <text x="200" y="342" text-anchor="middle" fill="#60A5FA" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="3">DIGITAL AGENCY & STUDIO</text>
+</svg>

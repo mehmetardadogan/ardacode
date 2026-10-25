@@ -1,0 +1,68 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="seoBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="seoLineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#155DFC"/>
+      <stop offset="100%" stop-color="#155DFC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="20" fill="url(#seoBg)"/>
+  <circle cx="500" cy="80" r="180" fill="#10B981" fill-opacity="0.15" filter="blur(60px)"/>
+  <circle cx="100" cy="280" r="160" fill="#155DFC" fill-opacity="0.18" filter="blur(50px)"/>
+
+  <!-- Analytics Dashboard Window -->
+  <rect x="50" y="35" width="500" height="305" rx="14" fill="#080F20" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="50" y="35" width="500" height="36" rx="14" fill="#0F172A"/>
+  <line x1="50" y1="71" x2="550" y2="71" stroke="#1E293B"/>
+  <circle cx="72" cy="53" r="5" fill="#EF4444"/>
+  <circle cx="88" cy="53" r="5" fill="#F59E0B"/>
+  <circle cx="104" cy="53" r="5" fill="#10B981"/>
+
+  <text x="130" y="58" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800">
+    Google Search Console &amp; Core Web Vitals Metrics
+  </text>
+  <rect x="440" y="44" width="90" height="20" rx="6" fill="#10B981" fill-opacity="0.2"/>
+  <text x="452" y="58" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">● LIVE 99%</text>
+
+  <!-- Metric Badges Row (3 Cards) -->
+  <rect x="75" y="85" width="138" height="65" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="90" y="105" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">PageSpeed Performance</text>
+  <text x="90" y="135" fill="#10B981" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="900">99 / 100</text>
+
+  <rect x="231" y="85" width="138" height="65" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="246" y="105" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Organik Tıklamalar</text>
+  <text x="246" y="135" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="24" font-weight="900">+340%</text>
+
+  <rect x="387" y="85" width="138" height="65" rx="8" fill="#0F172A" stroke="#1E293B"/>
+  <text x="402" y="105" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="10">Core Web Vitals</text>
+  <text x="402" y="135" fill="#38BDF8" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="900">0.4s LCP</text>
+
+  <!-- Big Interactive Chart Area -->
+  <rect x="75" y="165" width="450" height="155" rx="10" fill="#0A101D" stroke="#1E293B"/>
+
+  <!-- Chart Grid Lines -->
+  <line x1="90" y1="200" x2="510" y2="200" stroke="#1E293B" stroke-dasharray="3 3"/>
+  <line x1="90" y1="240" x2="510" y2="240" stroke="#1E293B" stroke-dasharray="3 3"/>
+  <line x1="90" y1="280" x2="510" y2="280" stroke="#1E293B" stroke-dasharray="3 3"/>
+
+  <!-- Smooth Growth Curve -->
+  <path d="M 90 290 Q 180 270 250 230 T 380 190 T 510 180" fill="none" stroke="#155DFC" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 90 290 Q 180 270 250 230 T 380 190 T 510 180 L 510 305 L 90 305 Z" fill="url(#seoLineGrad)" opacity="0.3"/>
+
+  <!-- Pulse Points on Graph -->
+  <circle cx="250" cy="230" r="5" fill="#155DFC" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="380" cy="190" r="5" fill="#155DFC" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="510" cy="180" r="6" fill="#10B981" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Tooltip on peak -->
+  <g transform="translate(420, 195)">
+    <rect width="90" height="26" rx="6" fill="#155DFC"/>
+    <text x="14" y="17" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="700">1. Sıra (SERP)</text>
+  </g>
+</svg>

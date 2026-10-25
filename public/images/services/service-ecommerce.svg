@@ -1,0 +1,70 @@
+<svg width="600" height="380" viewBox="0 0 600 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ecomBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="20" fill="url(#ecomBg)"/>
+  <circle cx="500" cy="100" r="180" fill="#155DFC" fill-opacity="0.18" filter="blur(60px)"/>
+  <circle cx="100" cy="300" r="160" fill="#F59E0B" fill-opacity="0.12" filter="blur(50px)"/>
+
+  <!-- Store Interface Browser Window -->
+  <rect x="50" y="35" width="500" height="305" rx="14" fill="#FFFFFF" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Browser Header -->
+  <rect x="50" y="35" width="500" height="36" rx="14" fill="#F8FAFC"/>
+  <line x1="50" y1="71" x2="550" y2="71" stroke="#E2E8F0"/>
+  <circle cx="72" cy="53" r="5" fill="#EF4444"/>
+  <circle cx="88" cy="53" r="5" fill="#F59E0B"/>
+  <circle cx="104" cy="53" r="5" fill="#10B981"/>
+
+  <rect x="180" y="44" width="200" height="20" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="220" y="58" fill="#475569" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600">store.mehmetarda.studio</text>
+
+  <!-- Store Banner -->
+  <rect x="75" y="85" width="450" height="65" rx="10" fill="#080F20"/>
+  <text x="95" y="115" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="900">YAZ KOLEKSİYONU 2026</text>
+  <text x="95" y="133" fill="#60A5FA" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700">%40 SEZON İNDİRİMİ &amp; ANINDA KARGO</text>
+  
+  <rect x="420" y="102" width="85" height="28" rx="6" fill="#155DFC"/>
+  <text x="438" y="120" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800">İNCELE</text>
+
+  <!-- Product Grid (3 Cards) -->
+  <!-- Product 1 -->
+  <rect x="75" y="165" width="138" height="155" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="85" y="175" width="118" height="75" rx="6" fill="#E2E8F0"/>
+  <circle cx="144" cy="212" r="22" fill="#CBD5E1"/>
+  <rect x="85" y="260" width="70" height="8" rx="3" fill="#080F20"/>
+  <rect x="85" y="274" width="45" height="7" rx="2" fill="#155DFC"/>
+  <rect x="85" y="290" width="118" height="20" rx="6" fill="#080F20"/>
+  <text x="120" y="304" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700">Sepete Ekle</text>
+
+  <!-- Product 2 -->
+  <rect x="231" y="165" width="138" height="155" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="241" y="175" width="118" height="75" rx="6" fill="#E2E8F0"/>
+  <rect x="268" y="192" width="64" height="42" rx="4" fill="#94A3B8"/>
+  <rect x="241" y="260" width="85" height="8" rx="3" fill="#080F20"/>
+  <rect x="241" y="274" width="50" height="7" rx="2" fill="#155DFC"/>
+  <rect x="241" y="290" width="118" height="20" rx="6" fill="#155DFC"/>
+  <text x="276" y="304" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700">Sepette (1)</text>
+
+  <!-- Product 3 -->
+  <rect x="387" y="165" width="138" height="155" rx="10" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <rect x="397" y="175" width="118" height="75" rx="6" fill="#E2E8F0"/>
+  <circle cx="456" cy="212" r="22" fill="#CBD5E1"/>
+  <rect x="397" y="260" width="65" height="8" rx="3" fill="#080F20"/>
+  <rect x="397" y="274" width="45" height="7" rx="2" fill="#155DFC"/>
+  <rect x="397" y="290" width="118" height="20" rx="6" fill="#080F20"/>
+  <text x="432" y="304" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700">Sepete Ekle</text>
+
+  <!-- Floating Checkout Badge -->
+  <g transform="translate(370, 240)">
+    <rect width="170" height="48" rx="12" fill="#080F20" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="24" cy="24" r="8" fill="#10B981"/>
+    <path d="M 20 24 L 23 27 L 29 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <text x="38" y="22" fill="#FFFFFF" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800">3D Secure &amp; Stripe</text>
+    <text x="38" y="35" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">Anında Ödeme Altyapısı</text>
+  </g>
+</svg>
