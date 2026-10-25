@@ -105,10 +105,6 @@ export default function Login() {
                     </div>
                 </div>
 
-                {/* Default Login Info Notice */}
-                <div className="mt-4 p-3 bg-blue-50/70 border border-blue-200/60 rounded-xl text-[11px] text-blue-800 text-center">
-                    Kurulum demo şifresi: <span className="font-mono font-bold">admin123!</span>
-                </div>
             </div>
         </div>
     );
