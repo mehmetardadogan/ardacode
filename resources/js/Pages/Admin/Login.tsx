@@ -2,12 +2,13 @@ import React from 'react';
 import { Head, useForm, Link } from '@inertiajs/react';
 import { Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react';
 
-export default function Login() {
+export default function Login({ verifyCode = false }: { verifyCode?: boolean }) {
     const { data, setData, post, processing, errors } = useForm({
         email: '',
         password: '',
         remember: true,
     });
+    const verification = useForm({ code: '' });
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -39,7 +40,30 @@ export default function Login() {
                         <span>Güvenli Oturum Açma</span>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    {verifyCode ? (
+                        <form onSubmit={(event) => {
+                            event.preventDefault();
+                            verification.post('/admin/login');
+                        }} className="space-y-4">
+                            <p className="text-sm text-slate-600">E-postana gönderilen 6 haneli kodu gir.</p>
+                            <label htmlFor="admin-code" className="block text-xs font-bold text-slate-700">Doğrulama kodu</label>
+                            <input
+                                id="admin-code"
+                                value={verification.data.code}
+                                onChange={(event) => verification.setData('code', event.target.value)}
+                                inputMode="numeric"
+                                autoComplete="one-time-code"
+                                pattern="[0-9]{6}"
+                                maxLength={6}
+                                required
+                                className="w-full rounded-xl border border-slate-200 px-4 py-2.5"
+                            />
+                            {verification.errors.code && <p role="alert" className="text-xs text-rose-500">{verification.errors.code}</p>}
+                            <button type="submit" disabled={verification.processing} className="w-full rounded-xl bg-blue-600 px-4 py-3 text-xs font-semibold text-white">
+                                Kodu doğrula
+                            </button>
+                        </form>
+                    ) : <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="space-y-1.5">
                             <label className="text-xs font-bold text-slate-700">E-posta</label>
                             <div className="relative">
@@ -97,7 +121,7 @@ export default function Login() {
                             <span>Giriş Yap</span>
                             <ArrowRight className="w-4 h-4" />
                         </button>
-                    </form>
+                    </form>}
 
                     <div className="pt-2 text-center">
                         <Link href="/" className="text-xs text-slate-400 hover:text-slate-700">
