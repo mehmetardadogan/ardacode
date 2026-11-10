@@ -90,6 +90,8 @@ class HomeController extends Controller
             'ip_address' => $request->ip(),
         ]);
 
+        $this->sendContactEmails($validated, $messageContent);
+
         if ($request->wantsJson() || $request->is('api/*')) {
             return response()->json([
                 'success' => true,
@@ -99,6 +101,40 @@ class HomeController extends Controller
         }
 
         return back()->with('success', 'Mesajınız başarıyla iletildi! Mehmet Arda Studio ile iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede size dönüş yapacağız.');
+    }
+
+    private function sendContactEmails(array $contact, string $details): void
+    {
+        if (! config('mail.mailers.contact.password')) {
+            return;
+        }
+
+        $inbox = config('mail.mailers.contact.username');
+        $recipient = $contact['email'];
+
+        try {
+            $mailer = \Illuminate\Support\Facades\Mail::mailer('contact');
+            $body = "Ad: {$contact['name']}\nE-posta: {$recipient}\n"
+                .'Telefon: '.($contact['phone'] ?? '—')."\n"
+                .'Hizmet: '.($contact['service'] ?? '—')."\n\n".$details;
+
+            $mailer->raw($body, fn ($email) => $email->from($inbox, 'Arda Web Tasarım')
+                ->to($inbox)->replyTo($recipient)->subject('Yeni iletişim formu mesajı'));
+
+            $key = 'contact-receipt:'.hash('sha256', strtolower($recipient));
+            if (strcasecmp($recipient, $inbox) !== 0
+                && \Illuminate\Support\Facades\Cache::add($key, true, 3600)) {
+                $mailer->raw(
+                    "Merhaba,\n\nMesajınızı aldık. Talebinizi inceleyip size dönüş yapacağız.\n\nArda Web Tasarım",
+                    fn ($email) => $email->from($inbox, 'Arda Web Tasarım')
+                        ->to($recipient)->subject('Mesajınızı aldık | Arda Web Tasarım')
+                );
+            }
+        } catch (\Exception $exception) {
+            \Illuminate\Support\Facades\Log::warning('Contact email failed', [
+                'exception_type' => $exception::class,
+            ]);
+        }
     }
 
     public function sitemap()

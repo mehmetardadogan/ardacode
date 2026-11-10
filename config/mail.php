@@ -36,6 +36,15 @@ return [
     */
 
     'mailers' => [
+        'contact' => [
+            'transport' => 'smtp',
+            'scheme' => 'smtps',
+            'host' => 'torvalds.ishostname.com',
+            'port' => 465,
+            'username' => 'info@ardacode.com.tr',
+            'password' => env('CONTACT_SMTP_PASSWORD'),
+            'timeout' => 5,
+        ],
 
         'smtp' => [
             'transport' => 'smtp',
